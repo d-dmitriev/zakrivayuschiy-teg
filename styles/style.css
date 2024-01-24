@@ -179,7 +179,7 @@
   margin: 25px;
   display: flex;
   flex-direction: column;
-  gap: 27px;
+  gap: 25px;
 }
 
 .section__text {
@@ -189,7 +189,7 @@
 .section-footer {
   display: inline-flex;
   align-self: flex-end;
-  gap: 7px;
+  gap: 5px;
   align-items: center;
 }
 
