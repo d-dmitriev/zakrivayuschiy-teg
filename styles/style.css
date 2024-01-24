@@ -198,15 +198,24 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: border-color 0.3s;
+  border: 2px solid transparent;
+  padding: 1px;
 }
 
-.is-liked {
-
+.card__icon-button:focus {
+  outline: none;
 }
 
-.like-icon {
-
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color, #000);
 }
+
+/* .is-liked {
+} */
+
+/* .like-icon {
+} */
 
 .card__like-button {
   background-color: var(--background-color);
@@ -219,6 +228,7 @@
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
+
 .animate-button {
   position: relative;
 }
