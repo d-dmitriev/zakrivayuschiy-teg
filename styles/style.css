@@ -269,18 +269,12 @@
 }
 
 .footer__save-button {
+  padding: 0;
   display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
   border: 2px solid var(--accent-color, #000);
   background-color: var(--background-color);
-  padding: 15px 19px;
-  min-width: 306px;
   font-family: var(--accent-font);
   font-size: 14px;
-  white-space: nowrap;
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
@@ -294,9 +288,20 @@
   width: 21px;
   height: 21px;
 }
+.footer__save-button .button__text {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 15px 19px;
+  white-space: nowrap;
+}
 
 @media (width <= 375px) {
-  .footer__save-button {
+  .footer__save-button .button__text {
+    display: flex;
+    flex-wrap: wrap;
     max-width: 310px;
     gap: 7px;
   }
