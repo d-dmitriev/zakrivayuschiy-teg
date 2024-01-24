@@ -9,6 +9,7 @@ body.theme-dark {
   --accent-color: #00CC14;
   --main-text-weight: 465;
   --background: url(../svg/pattern-dark.svg);
+  --header-weight: 785;
 }
 
 body.theme-light {
@@ -16,6 +17,7 @@ body.theme-light {
   --accent-color: #000;
   --main-text-weight: 400;
   --background: url(../svg/pattern-light.svg);
+  --header-weight: 700;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +26,7 @@ body.theme-light {
     --accent-color: #00CC14;
     --main-text-weight: 465;
     --background: url(../svg/pattern-dark.svg);
+    --header-weight: 785;
   }
 }
 
@@ -33,5 +36,6 @@ body.theme-light {
     --accent-color: #000;
     --main-text-weight: 400;
     --background: url(../svg/pattern-light.svg);
+    --header-weight: 700;
   }
 }
