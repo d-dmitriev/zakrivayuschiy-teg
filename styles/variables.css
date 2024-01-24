@@ -8,4 +8,7 @@
     --accent-color: #000;
     --background: url(../svg/pattern-light.svg);
     --header-weight: 700;
+    --heart-sparks: #f00;
+    --heart-core: transparent;
+    --heart-main-body: transparent;
 }

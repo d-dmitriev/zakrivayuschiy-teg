@@ -189,16 +189,21 @@
 .section-footer {
   display: inline-flex;
   align-self: flex-end;
-  gap: 12px;
+  gap: 7px;
   align-items: center;
 }
 
 .card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
   cursor: pointer;
   transition: border-color 0.3s;
   border: 2px solid transparent;
-  padding: 1px;
+  padding: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .card__icon-button:focus {
@@ -209,17 +214,71 @@
   border-color: var(--accent-color, #000);
 }
 
-/* .is-liked {
-} */
-
 /* .like-icon {
 } */
+
+.card__icon-button .core {
+  fill: var(--heart-core);
+  transition: fill 0.3s 0.03s;
+}
+
+.card__icon-button .main-body {
+  fill: var(--heart-main-body);
+  transition: fill 0.3s;
+}
+
+.card__icon-button .sparks {
+  opacity: 0;
+}
+
+.card__icon-button:hover {
+  --heart-core: var(--accent-color);
+  --heart-main-body: var(--accent-color);
+}
+
+.card__icon-button:hover .core {
+  transition: fill 0.3s;
+}
+.card__icon-button:hover .main-body {
+  transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:active {
+  --heart-core: var(--heart-sparks);
+  --heart-main-body: var(--heart-sparks);
+}
+
+.like-icon .heart {
+  transform-origin: 50% 50%;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-sparks);
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .core {
+  --heart-core: var(--heart-sparks);
+}
+
+.like-icon.is-liked .main-body {
+  --heart-main-body: var(--heart-sparks);
+}
+
+.like-icon.is-liked .heart {
+  animation: like-scale 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-opacity 0.3s 0.3s ease-in alternate;
+}
 
 .card__like-button {
   background-color: var(--background-color);
   border: 2px solid var(--accent-color, #000);
   padding: 9px 17px;
   width: 130px;
+  height: 40px;
   font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%; /* 12.6px */
@@ -317,5 +376,23 @@
   }
   to {
     transform: translateX(1px);
+  }
+}
+
+@keyframes like-scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
+
+@keyframes sparks-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
